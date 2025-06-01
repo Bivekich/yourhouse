@@ -89,7 +89,7 @@ const CatalogRequestModal = ({ isOpen, onClose }: CatalogRequestModalProps) => {
                 placeholder="+7 (___) ___-__-__"
                 value={phone}
                 onChange={e => {
-                  let val = e.target.value.replace(/\D/g, '').slice(0, 11);
+                  const val = e.target.value.replace(/\D/g, '').slice(0, 11);
                   setPhone(val);
                 }}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-lg"

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface FadeInOnMountProps {
@@ -16,7 +16,7 @@ const FadeInOnMount = ({
   className = '',
   delay = 0,
 }: FadeInOnMountProps) => {
-  const MotionComponent = motion[as];
+  const MotionComponent = motion[as] as React.ComponentType<HTMLMotionProps<"div">>;
   return (
     <MotionComponent
       initial={{ opacity: 0, y: -20 }}

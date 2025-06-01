@@ -95,7 +95,7 @@ const CallbackModal = ({ isOpen, onClose }: CallbackModalProps) => {
               placeholder="Ваш телефон"
               value={phone}
               onChange={e => {
-                let val = e.target.value.replace(/\D/g, '').slice(0, 11);
+                const val = e.target.value.replace(/\D/g, '').slice(0, 11);
                 setPhone(val);
               }}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"

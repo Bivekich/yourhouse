@@ -16,7 +16,7 @@ const FadeInSection = ({
   className = '',
   delay = 0 
 }: FadeInSectionProps) => {
-  const MotionComponent = motion[as];
+  const MotionComponent = motion[as] as React.ComponentType<HTMLMotionProps<"div">>;
 
   return (
     <MotionComponent

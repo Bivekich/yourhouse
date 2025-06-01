@@ -237,7 +237,7 @@ const HouseCalculatorModal = ({ isOpen, onClose }: HouseCalculatorModalProps) =>
                 placeholder="Телефон"
                 value={phone}
                 onChange={e => {
-                  let val = e.target.value.replace(/\D/g, '').slice(0, 11);
+                  const val = e.target.value.replace(/\D/g, '').slice(0, 11);
                   setPhone(val);
                 }}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-base sm:text-lg"
